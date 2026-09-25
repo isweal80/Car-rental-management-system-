@@ -1,0 +1,58 @@
+print("Welcome to the Nice Rental Shop Management System!")
+Worker = input("Please enter your name: ")
+print(f"Hello, {Worker}!")
+print("Please select a car from the following options:")
+print("1. Toyota")
+print("2. Lexus")
+print("3. Honda")
+print("4. Mercedes")
+print("5. bmw")
+print("6. Volkswagen")
+print("7. Range Rover")
+Toyota = 20
+Lexus = 30
+Honda = 20
+Mercedes = 15
+bmw = 20
+volkswagen = 10
+range_rover = 11
+
+
+class Input:
+    """Collect and validate a car selection from the menu."""
+
+    VALID_CHOICES = {"1", "2", "3", "4", "5", "6", "7"}
+
+    @classmethod
+    def get_choice(cls, prompt="Please enter the number corresponding to your choice: "):
+        choice = input(prompt).strip()
+        return choice if choice in cls.VALID_CHOICES else None
+
+
+if __name__ == "__main__":
+
+    choice = Input.get_choice()
+
+    if choice == "1":
+        print(
+            f"You have selected Toyota. 5 cars are available. The rental cost is ${Toyota} per day.")
+    elif choice == "2":
+        print(
+            f"You have selected Lexus. 3 cars are available. The rental cost is ${Lexus} per day.")
+    elif choice == "3":
+        print(
+            f"You have selected Honda. 7 cars are available. The rental cost is ${Honda} per day.")
+    elif choice == "4":
+        print(
+            f"You have selected Mercedes. 4 cars are available. The rental cost is ${Mercedes} per day.")
+    elif choice == "5":
+        print(
+            f"You have selected bmw. 6 cars are available. The rental cost is ${bmw} per day.")
+    elif choice == "6":
+        print(
+            f"You have selected Volkswagen. 8 cars are available. The rental cost is ${volkswagen} per day.")
+    elif choice == "7":
+        print(
+            f"You have selected Range Rover. 2 cars are available. The rental cost is ${range_rover} per day.")
+    else:
+        print("Invalid selection. Please try again.")
