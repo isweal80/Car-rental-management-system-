@@ -1,5 +1,12 @@
 print("Welcome to the Nice Rental Shop Management System!")
 Worker = input("Please enter your name: ")
+password = input("Please enter your password: ")
+while password != "Big Balls 2000":
+    password = input("Please enter your password: ")
+    if password == "Big Balls 2000":
+        break
+    else:
+        print("Incorrect password. Please try again.")
 print(f"Hello, {Worker}!")
 print("Please select a car from the following options:")
 print("1. Toyota")
